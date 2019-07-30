@@ -1,0 +1,12 @@
+#searchBox{
+	opacity: 0;
+	transition: opacity 200ms;
+}
+
+#searchIcon{
+	transition: transform 500ms;
+}
+
+#searchIcon:hover{
+	transform: rotate(90deg);
+}
