@@ -1,7 +1,5 @@
 <?php
 	
-	include '../includes/conn.php';
-
 	if(isset($_GET['deleteId']))
 	{     
 		$id = $_GET['deleteId'];

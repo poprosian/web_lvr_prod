@@ -1,12 +1,12 @@
 <?php
-	include_once '../includes/conn.php';
-	include '../includes/admin_exist.php';
-	include '../includes/admin_signup.php';
-	include '../includes/admin_login.php';
+	include_once '../includes/conn_inc.php';
+	include 'admin_includes/admin_exist_inc.php';
+	include 'admin_includes/admin_signup_inc.php';
+	include 'admin_includes/admin_login_inc.php';
 	session_start();
 	if(isset($_SESSION['user']))
 	{
-		header("Location: ../admin/panel");
+		header("Location: ../admin/admin_panel_pg");
 	}	
 ?>
 
@@ -27,7 +27,7 @@
 				if($resultCheck == 1)
 				{
 					echo '<h1 class="text-center">Panou de administrare | Log in</h1>';
-					echo '<form action="index.php" method="POST">';
+					echo '<form action="index" method="POST">';
 						echo '<div class="form-group"';
 							echo '<label for="utilizator">Utilizator:</label>';
 							echo '<input type="text" class="form-control" placeholder="Utilizator" id="utilizator" name="userNameLog">';
@@ -43,7 +43,7 @@
 					echo '<h1 class="text-center">Panou de administrare | Creeare cont</h1>';
 					echo '<br>';
 					echo '<p>Aici se poate creea un cont de administrator. Poate exista doar un singur cont de administrator.</p>';
-					echo '<form action="index.php" method="POST">';
+					echo '<form action="index" method="POST">';
 						echo '<div class="form-group"';
 							echo '<label for="utilizator">Utilizator nou:</label>';
 							echo '<input type="text" class="form-control" placeholder="Utilizator" id="utilizator" name="userName">';

@@ -18,7 +18,7 @@
 				
 					echo '<div class="col-md-3">';
 						echo '<div class="card"> ';
-							echo '<img class="card-img-top" src="images/' . $row['image'] . '" alt="Card image cap">';
+							echo '<img class="card-img-top" src="images/product_images/' . $row['image'] . '" alt="Card image cap">';
 							echo '<div class="card-body">';
 								echo '<h5 class="card-title">' . ucfirst($row['titlu']) . '</h5>';
 								echo '<p class="card-text">' . $row['descriere'] . '</p>';

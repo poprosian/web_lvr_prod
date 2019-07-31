@@ -1,6 +1,6 @@
 <?php
-	include_once '../includes/conn.php';
-	include '../includes/admin_adauga.php';
+	include_once '../includes/conn_inc.php';
+	include 'admin_includes/admin_edit_inc.php';
 	session_start();
 	if(!isset($_SESSION['user']))
 	{
@@ -18,20 +18,20 @@
 </head>
 <body>
 
-	<?php include '../includes/admin_nav.php' ?>	
+	<?php include 'admin_includes/admin_nav_inc_v.php' ?>	
 
 	<br>
-	<h1 class="text-center">Adauga produs</h1>
+	<h1 class="text-center">Editeaza produs</h1>
 	<hr>
 
 
 	<div class="jumbotron">
-		<form action="adauga" method="POST" enctype="multipart/form-data">
+		<form action="admin_edit_pg" method="POST" enctype="multipart/form-data">
 			<div class="form-group">
-				<input type="text" class="form-control" id="idNume" placeholder="Nume produs" name="numeProdus">
+				<input type="text" class="form-control" id="idNume" placeholder="Nume produs" name="numeProdus" <?php echo 'value="'.$editRow['titlu'].'"';?>>
 			</div>
 			<div class="form-group">
-				<textarea class="form-control" rows="3" placeholder="Descriere produs" name="descProdus"></textarea>
+				<textarea class="form-control" rows="3" placeholder="Descriere produs" name="descProdus"><?php echo $editRow['descriere'];?></textarea>
 			</div>
 
 			<div class="form-group">

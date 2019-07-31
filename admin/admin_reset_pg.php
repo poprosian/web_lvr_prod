@@ -2,7 +2,7 @@
 	session_start();
 	if(!isset($_SESSION['user']))
 	{
-		header("Location: ../admin/index");
+		header("Location: index");
 	}	
 ?>
 
@@ -17,7 +17,7 @@
 </head>
 <body>
 	
-	<?php include '../includes/admin_nav.php' ?>	
+	<?php include 'admin_includes/admin_nav_inc_v.php' ?>	
 
 
 

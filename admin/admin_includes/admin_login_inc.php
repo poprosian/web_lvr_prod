@@ -7,7 +7,7 @@
 
 		if(empty($userLog) || empty($passwordLog))
 		{
-			header("Location: ../admin/index?error=empty");
+			header("Location: index?error=empty");
 			exit();
 		}
 		else
@@ -16,7 +16,7 @@
 			$stmtLog = mysqli_stmt_init($conn);
 			if(!mysqli_stmt_prepare($stmtLog, $sqlLog))
 			{
-				header("Location: ../admin/index?error=sqlerror");
+				header("Location: index?error=sqlerror");
 				exit();
 			}
 			else
@@ -29,25 +29,25 @@
 					$pwdCheck = password_verify($passwordLog, $row['password']);
 					if($pwdCheck == false)
 					{
-						header("Location: ../admin/index?error=wrongpsw");
+						header("Location: index?error=wrongpsw");
 						exit();
 					}
 					else if($pwdCheck == true)
 					{
 						session_start();
 						$_SESSION['user'] = $row['user_name'];
-						header("Location: ../admin/panel");
+						header("Location: admin_panel_pg");
 						exit();
 					}
 					else
 					{
-						header("Location: ../admin/index?error=wrongpsw");
+						header("Location: index?error=wrongpsw");
 						exit();
 					}
 				}
 				else
 				{
-					header("Location: ../admin/index?error=nouser");
+					header("Location: index?error=nouser");
 					exit();
 				}
 			}

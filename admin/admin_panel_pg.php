@@ -1,6 +1,6 @@
 <?php
-	include_once '../includes/conn.php';
-	include 'admin_delete_entry.php';
+	include_once '../includes/conn_inc.php';
+	include 'admin_includes/admin_delete_inc.php';
 	session_start();
 	if(!isset($_SESSION['user']))
 	{
@@ -18,24 +18,42 @@
 </head>
 <body>
 
-	<?php include '../includes/admin_nav.php' ?>	
+	<?php include 'admin_includes/admin_nav_inc_v.php' ?>	
 
 	<br>
 
 	<div class="row">
     <div class="col-sm-12 text-center">
         <h1 class="text-center">Lista produse</h1>
-        <a href="adauga" class="btn btn-primary btn-md">+</a>
+        <a href="admin_add_pg" class="btn btn-primary btn-md">+</a>
      </div>
 	</div>
 
+	<hr>
+	<br> 
+	<div class="jumbotron">
+		<form action="admin_panel_pg" class="form-inline" method="POST">
+			<label for="selectTip" class="my-1 mr-2">Alegeti tipul de aliment: </label>
+			<select class="custom-select my-1 mr-sm-2" id="selectTip" name="SelectCategorie">
+				<option value="NULL">Alege...</option>
+				<option value="toate">Toate</option>
+				<option value="fructe">Fructe</option>
+				<option value="legume">Legume</option>
+				<option value="carne">Carne</option>
+				<option value="mezeluri">Mezeluri</option>
+				<option value="paine">Paine</option>
+				<option value="dulciuri">Dulciuri</option>
+			</select>
+      		<button type="submit" class="btn btn-primary my-1" name="submit">Cauta</button>
+		
+		</form>
+	</div>
 	
-
 		
 	
 	<hr>
 	<div class="container">
-		<?php include '../includes/lista_produse_admin.php'; ?>
+		<?php include 'admin_includes/admin_product_list_inc.php'; ?>
 	</div>
 
 
