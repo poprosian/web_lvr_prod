@@ -13,6 +13,11 @@
 			header("Location: admin_add_pg");
 			exit();
 		}
+		else if($tag == 'NULL')
+		{
+			header("Location: admin_add_pg");
+			exit();
+		}
 		else
 		{
 			$sql = "INSERT INTO produse (titlu, tag, descriere, image) VALUES(?, ?, ?, ?);";

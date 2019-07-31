@@ -1,6 +1,5 @@
 <?php
 	include_once '../includes/conn_inc.php';
-	include 'admin_includes/admin_delete_inc.php';
 	session_start();
 	if(!isset($_SESSION['user']))
 	{
@@ -23,10 +22,10 @@
 	<br>
 
 	<div class="row">
-    <div class="col-sm-12 text-center">
-        <h1 class="text-center">Lista produse</h1>
-        <a href="admin_add_pg" class="btn btn-primary btn-md">+</a>
-     </div>
+    	<div class="col-sm-12 text-center">
+        	<h1 class="text-center">Lista produse</h1>
+        	<a href="admin_add_pg" class="btn btn-primary btn-md">+</a>
+     	</div>
 	</div>
 
 	<hr>
@@ -53,7 +52,11 @@
 	
 	<hr>
 	<div class="container">
-		<?php include 'admin_includes/admin_product_list_inc.php'; ?>
+
+		<?php include 'admin_includes/admin_product_list_inc.php';
+		include 'admin_includes/admin_delete_inc.php';
+
+		?>
 	</div>
 
 

@@ -22,12 +22,13 @@
 							echo '<div class="card-body">';
 								echo '<h5 class="card-title">' . ucfirst($row['titlu']) . '</h5>';
 								echo '<p class="card-text">' . $row['descriere'] . '</p>';
-								echo '<a href="admin_panel_pg?deleteId=' .$row['id_produs'].'" class="btn btn-danger">X</a>';
-								echo '<a href="admin_edit_pg?editId=' .$row['id_produs'].'" class="btn btn-primary float-right">Editeaza</a>';
+								echo '<form action="admin_panel_pg" method="POST">';
+									echo '<button class="btn btn-danger" name="x-'.$row['id_produs'].'" >X</button>';
+									echo '<a href="admin_edit_pg?editId='.$row['id_produs'].'  " class="btn btn-primary float-right">Editeaza</a>';
+								echo '</form>';
 							echo '</div>';
 						echo '</div>'; 
 					echo '</div>';
-
 				
 				$i++;
 				if($i==4)
@@ -40,9 +41,7 @@
 					echo '</div>';
 					echo '<br>';
 				}
-			}
-			
-			
+			}		
 			else
 			{
 				$categorie = $_POST['SelectCategorie'];
@@ -59,8 +58,10 @@
 								echo '<div class="card-body">';
 									echo '<h5 class="card-title">' . ucfirst($row['titlu']) . '</h5>';
 									echo '<p class="card-text">' . $row['descriere'] . '</p>';;
-									echo '<a href="admin_panel_pg?deleteId=' .$row['id_produs'].'" class="btn btn-danger">X</a>';
-									echo '<a href="admin_edit_pg?editId=' .$row['id_produs'].'" class="btn btn-primary float-right">Editeaza</a>';
+									echo '<form action="admin_panel_pg" method="POST">';
+										echo '<button class="btn btn-danger" name="x-'.$row['id_produs'].'" >X</button>';
+										echo '<a href="admin_edit_pg?editId='.$row['id_produs'].'" class="btn btn-primary float-right">Editeaza</a>';
+									echo '</form>';
 								echo '</div>';
 							echo '</div>'; 
 						echo '</div>';
@@ -84,6 +85,11 @@
 				}
 			}
 			
+		}
+		if($i!=0)
+		{
+			echo '</div>';
+			echo '<br>';
 		}
 	}
 			

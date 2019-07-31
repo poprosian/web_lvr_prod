@@ -24,34 +24,43 @@
 	<h1 class="text-center">Editeaza produs</h1>
 	<hr>
 
-
 	<div class="jumbotron">
 		<form action="admin_edit_pg" method="POST" enctype="multipart/form-data">
+
 			<div class="form-group">
+				<label for="idProdus">ID Produs:</label>
+				<input readonly type="text" class="form-control" id="idProdus" name="idProdus" <?php echo 'value="'.$editRow['id_produs'].'"';?>>
+			</div>
+
+			<div class="form-group">
+				<label for="idNume">Nume Produs:</label>
 				<input type="text" class="form-control" id="idNume" placeholder="Nume produs" name="numeProdus" <?php echo 'value="'.$editRow['titlu'].'"';?>>
 			</div>
 			<div class="form-group">
-				<textarea class="form-control" rows="3" placeholder="Descriere produs" name="descProdus"><?php echo $editRow['descriere'];?></textarea>
+				<label for="idDesc">Descriere Produs:</label>
+				<textarea class="form-control" id="idDesc" rows="3" placeholder="Descriere produs" name="descProdus"><?php echo $editRow['descriere'];?></textarea>
 			</div>
 
 			<div class="form-group">
-				<select class="form-control" name="selectProdus">
+				<label for="idCat">Categorie:</label>
+				<select class="form-control" name="selectProdus" id="idCat">
 				    <option value="NULL">Categorie...</option>
-				    <option value="fructe">Fructe</option>
-					<option value="legume">Legume</option>
-					<option value="carne">Carne</option>
-					<option value="mezeluri">Mezeluri</option>
-					<option value="paine">Paine</option>
-					<option value="dulciuri">Dulciuri</option>
+				    <option value="fructe" <?php if($editRow['tag']=="fructe") echo 'selected';?>>Fructe</option>
+					<option value="legume" <?php if($editRow['tag']=="legume") echo 'selected';?>  >Legume</option>
+					<option value="carne" <?php if($editRow['tag']=="carne") echo 'selected';?>>Carne</option>
+					<option value="mezeluri" <?php if($editRow['tag']=="mezeluri") echo 'selected';?>>Mezeluri</option>
+					<option value="paine" <?php if($editRow['tag']=="paine") echo 'selected';?>>Paine</option>
+					<option value="dulciuri" <?php if($editRow['tag']=="dulciuri") echo 'selected';?>>Dulciuri</option>
 			    </select>
 			</div>
 
 			<div class="form-group">
-				<input type="file" name="imgProdus">
+				<label for="idPoza">Poza:</label>
+				<input type="file" name="imgProdus" id="idPoza">
 			</div>
 
 			<div class="form-group">
-				<button class="btn btn-success" name="adauga-submit">Adauga produs</button>
+				<button class="btn btn-success" name="adauga-submit">Editeaza produs</button>
 			</div>
 		</form>
 
