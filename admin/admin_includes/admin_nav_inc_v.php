@@ -13,6 +13,9 @@
 			<li <?php if($menuName=='admin_reset_pg.php'){echo 'class="nav-item active"';}else{echo 'class="nav-item"';} ?>>
 				<a href="admin_reset_pg" class="nav-link">RESETARE CONT</a>
 			</li>
+			<li <?php if($menuName=='admin_comenzi_pg.php'){echo 'class="nav-item active"';}else{echo 'class="nav-item"';} ?>>
+				<a href="admin_comenzi_pg" class="nav-link">COMENZI</a>
+			</li>
 			<li class="nav-item">
 				<form action="admin_includes/admin_logout_inc" method="POST">
 					<button type="submit" name="logout-submit" class="nav-link btn btn-xs">LOG OUT</button>

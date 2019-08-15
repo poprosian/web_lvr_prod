@@ -10,3 +10,20 @@
 #searchIcon:hover{
 	transform: rotate(90deg);
 }
+
+
+#cosIcon{
+	transition: transform 500ms;
+}
+
+#cosIcon:hover{
+	transform: rotate(45deg);
+}
+
+
+#notiJumbo{
+	opacity: 0;
+	background-color: #27b327;
+	border: 1px solid black;
+	transition: opacity 500ms;
+}

@@ -60,6 +60,11 @@
 			</div>
 
 			<div class="form-group">
+				<label for="idPret">Pret:</label>
+				<input type="number" step="0.01" class="form-control" id="idPret" placeholder="Pret produs" name="pretProdus" <?php echo 'value="'.$editRow['pret'].'"';?>>
+			</div>
+
+			<div class="form-group">
 				<button class="btn btn-success" name="adauga-submit">Editeaza produs</button>
 			</div>
 		</form>

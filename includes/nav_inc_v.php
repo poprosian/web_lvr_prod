@@ -17,6 +17,9 @@
 				<a href="contact_pg" class="nav-link">CONTACT</a>
 			</li>
 			<li class="nav-item">
+				<a  href="cos_pg" class="nav-link"><img id="cosIcon" src="images/shopping-cart.svg"  alt="CART"></a>
+			</li>
+			<li class="nav-item">
 				<form class="form-inline" action="products_pg" method="GET">
 					<input class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Search" style="display: none;" id="searchBox" name="globalSearch">
 					<a href="#" class="nav-link" id="searchIcon">

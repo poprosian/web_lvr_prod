@@ -5,10 +5,11 @@
 		$nume = $_POST['numeProdus'];
 		$desc = $_POST['descProdus'];
 		$tag = $_POST['selectProdus'];
+		$pret = $_POST['pretProdus'];
 		$img = $_FILES['imgProdus']['name'];
 
 
-		if(empty($nume) || empty($desc) || empty($tag) || empty($img))
+		if(empty($nume) || empty($desc) || empty($tag) || empty($pret) || empty($img))
 		{
 			header("Location: admin_add_pg");
 			exit();
@@ -20,7 +21,7 @@
 		}
 		else
 		{
-			$sql = "INSERT INTO produse (titlu, tag, descriere, image) VALUES(?, ?, ?, ?);";
+			$sql = "INSERT INTO produse (titlu, tag, descriere, pret, image) VALUES(?, ?, ?, ?, ?);";
 			$stmt = mysqli_stmt_init($conn);
 			if(!mysqli_stmt_prepare($stmt,$sql))
 			{
@@ -29,7 +30,7 @@
 			}
 			else
 			{
-				mysqli_stmt_bind_param($stmt, "ssss", $nume,$tag,$desc,$img);
+				mysqli_stmt_bind_param($stmt, "sssss", $nume,$tag,$desc,$pret,$img);
 				mysqli_stmt_execute($stmt);
 
 				$sql2 = "SELECT * FROM produse WHERE titlu = '".$nume."' AND descriere = '".$desc."';";

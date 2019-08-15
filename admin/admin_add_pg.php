@@ -49,6 +49,11 @@
 			<div class="form-group">
 				<input type="file" name="imgProdus">
 			</div>
+			
+			<div class="form-group">
+				<input type="number" step="0.01" class="form-control" id="idPret" placeholder="Pret produs" name="pretProdus">
+			</div>
+
 
 			<div class="form-group">
 				<button class="btn btn-success" name="adauga-submit">Adauga produs</button>

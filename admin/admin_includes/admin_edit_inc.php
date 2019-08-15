@@ -17,9 +17,10 @@
 		$idP = $_POST['idProdus'];
 		$desc = $_POST['descProdus'];
 		$tag = $_POST['selectProdus'];
+		$pret = $_POST['pretProdus'];
 		$img = $_FILES['imgProdus']['name'];
 
-		if(empty($nume) || empty($desc) || empty($tag))
+		if(empty($nume) || empty($desc) || empty($tag) || empty($pret))
 		{
 			
 			header("Location: admin_edit_pg?editId=".$idP."");
@@ -29,12 +30,12 @@
 		{
 			if(empty($img))
 			{
-				$sql = "UPDATE produse SET titlu = ?, tag = ?, descriere = ? WHERE id_produs = '".$idP."' ;";
+				$sql = "UPDATE produse SET titlu = ?, tag = ?, descriere = ?, pret = ? WHERE id_produs = '".$idP."' ;";
 
 			}
 			else
 			{
-				$sql = "UPDATE produse SET titlu = ?, tag = ?, descriere = ?, image = ? WHERE id_produs = '".$idP."';";
+				$sql = "UPDATE produse SET titlu = ?, tag = ?, descriere = ?, pret = ?, image = ? WHERE id_produs = '".$idP."';";
 			}
 			
 			$stmt = mysqli_stmt_init($conn);
@@ -47,11 +48,11 @@
 			{
 				if(empty($img))
 				{
-					mysqli_stmt_bind_param($stmt, "sss", $nume,$tag,$desc);
+					mysqli_stmt_bind_param($stmt, "ssss", $nume,$tag,$desc,$pret);
 				}
 				else
 				{
-					mysqli_stmt_bind_param($stmt, "ssss", $nume,$tag,$desc,$img);
+					mysqli_stmt_bind_param($stmt, "sssss", $nume,$tag,$desc,$pret,$img);
 				}
 				mysqli_stmt_execute($stmt);
 
