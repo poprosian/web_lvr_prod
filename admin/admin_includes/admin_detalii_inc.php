@@ -22,6 +22,12 @@
 					}
 				}
 			}
+
+			$sql = "SELECT sup FROM comenzi WHERE id_comanda = ".$id.";";
+			$result = mysqli_query($conn,$sql);
+			$sup = mysqli_fetch_assoc($result);
+			echo '<h4>Informatii suplimentare:</h4><hr>';
+			echo '<p>'.$sup['sup'].'</p>';
 			
 		}
 

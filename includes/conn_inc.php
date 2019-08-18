@@ -1,10 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbName = "livamproduse";
+$config = parse_ini_file('configs/database.ini');
 
-$conn = mysqli_connect($servername, $username, $password, $dbName);
+$conn = mysqli_connect($config['servername'], $config['username'], $config['password'], $config['dbname']);
 
 if($conn->connect_error)
 {

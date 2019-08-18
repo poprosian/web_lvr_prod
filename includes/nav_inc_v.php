@@ -8,16 +8,13 @@
 	<div class="collapse navbar-collapse" id="menuItems">
 		<ul class="navbar-nav ml-auto">
 			<li <?php if($menuName=='index.php'){echo 'class="nav-item active"';}else{echo 'class="nav-item"';} ?>>
-				<a href="index" class="nav-link">ACASA</a>
+				<a href="index" class="nav-link">ACASĂ</a>
 			</li>
 			<li <?php if($menuName=='products_pg.php'){echo 'class="nav-item active"';}else{echo 'class="nav-item"';} ?>>
 				<a href="products_pg" class="nav-link">PRODUSE</a>
 			</li>
-			<li <?php if($menuName=='contact_pg.php'){echo 'class="nav-item active"';}else{echo 'class="nav-item"';} ?>>
-				<a href="contact_pg" class="nav-link">CONTACT</a>
-			</li>
 			<li class="nav-item">
-				<a  href="cos_pg" class="nav-link"><img id="cosIcon" src="images/shopping-cart.svg"  alt="CART"></a>
+				<a  href="cos_pg" class="nav-link"><img id="cosIcon" src="images/shopping-cart.svg"  alt="CART"><span id="badgeSpan" class=""></span></a>
 			</li>
 			<li class="nav-item">
 				<form class="form-inline" action="products_pg" method="GET">

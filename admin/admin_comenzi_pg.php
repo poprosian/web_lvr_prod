@@ -35,6 +35,7 @@
 						<th scope="col">Adresa client</th>
 						<th scope="col">E-Mail client</th>
 						<th scope="col">Data</th>
+						<th scope="col">Total</th>
 						<th scope="col">Actiuni</th>
 					</thead>
 					<tbody>

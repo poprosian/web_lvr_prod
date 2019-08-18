@@ -16,11 +16,11 @@
 
 				if($categorie == "toate")
 				{
+
 					if($i==0)
 					{
 						echo '<div class="row">';
 					}
-					
 						echo '<div class="col-md-3">';
 							echo '<div class="card"> ';
 								echo '<img class="card-img-top" src="images/product_images/' . $row['image'] . '" alt="Card image cap">';
@@ -37,7 +37,7 @@
 											
 											<input style="width: 3em;" type="number" value="1" class="float-left" maxlength="2" min="1" name="cantitate">
 											<input style="display:none;"  value="'.$row['id_produs'].'" name="id_produs">
-											<input type="submit" value="Adauga in cos" class="btn btn-sm btn-primary float-right cartButton">
+											<input type="submit" value="Adauga in cos" class="btn btn-sm btn-primary float-right cartButton" onclick="notif();badge();">
 
 										';
 								echo '</form>';
@@ -57,6 +57,8 @@
 						echo '</div>';
 						echo '<br>';
 					}
+
+
 				}
 				else if($categorie == $row['tag'])
 				{
@@ -81,7 +83,7 @@
 											
 											<input style="width: 3em;" type="number" value="1" class="float-left" maxlength="2" min="1" name="cantitate">
 											<input style="display:none;"  value="'.$row['id_produs'].'" name="id_produs">
-											<input type="submit" value="Adauga in cos" class="btn btn-sm btn-primary float-right">
+											<input type="submit" value="Adauga in cos" class="btn btn-sm btn-primary float-right cartButton" onclick="notif();badge();">
 
 										';
 								echo '</form>';
@@ -103,6 +105,11 @@
 					}
 				}
 				
+			}
+
+			if($resultCheck%4!=0)
+			{
+				echo '</div>';
 			}
 		}
 	}

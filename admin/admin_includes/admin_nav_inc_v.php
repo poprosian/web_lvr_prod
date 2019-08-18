@@ -17,6 +17,9 @@
 				<a href="admin_comenzi_pg" class="nav-link">COMENZI</a>
 			</li>
 			<li class="nav-item">
+				<a href="../index" class="nav-link">SITE</a>
+			</li>
+			<li class="nav-item">
 				<form action="admin_includes/admin_logout_inc" method="POST">
 					<button type="submit" name="logout-submit" class="nav-link btn btn-xs">LOG OUT</button>
 				</form>

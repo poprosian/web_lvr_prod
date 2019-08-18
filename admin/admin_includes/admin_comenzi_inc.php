@@ -22,6 +22,7 @@
 					<td>'.$row['adresa'].'</td>
 					<td>'.$row['email'].'</td>
 					<td>'.date('d/m/Y H:i', $row['data']).'</td>
+					<td>'.$row['total'].'€</td>
 					<td><a href="admin_comenzi_pg?action=final&id='.$row['id_comanda'].'" class="btn btn-success btn-sm">FINALIZEAZA</a> <a href="admin_comenzi_pg?action=delete&id='.$row['id_comanda'].'" data-toggle="tooltip" data-placement="top" title="Sterge" class="btn btn-danger btn-sm">X</a></td>
 				</tr>';
 				
@@ -34,6 +35,8 @@
 		{
 			$id = filter_input(INPUT_GET, 'id');
 			$sql = "DELETE FROM comenzi WHERE id_comanda = ".$id.";";
+			mysqli_query($conn,$sql);
+			$sql = "DELETE FROM comenzi_aux WHERE id_comanda = ".$id.";";
 			mysqli_query($conn,$sql);
 			header("Location: admin_comenzi_pg");
 			exit();
@@ -66,6 +69,7 @@
 					<td>'.$row['telefon'].'</td>
 					<td>'.$row['adresa'].'</td>
 					<td>'.$row['email'].'</td>
+					<td>'.$row['total'].'€</td>
 					<td>'.date('d/m/Y H:i', $row['data']).'</td>
 				</tr>';	
 			}

@@ -32,7 +32,7 @@
 											
 											<input style="width: 3em;" type="number" value="1" class="float-left" maxlength="2" min="1" name="cantitate">
 											<input style="display:none;"  value="'.$row['id_produs'].'" name="id_produs">
-											<input type="submit" value="Adauga in cos" class="btn btn-sm btn-primary float-right">
+											<input type="submit" value="Adauga in cos" class="btn btn-sm btn-primary float-right cartButton" onclick="notif()">
 
 										';
 								echo '</form>';
@@ -42,16 +42,20 @@
 
 				
 				$i++;
-				if($i==4)
-				{
-					$i=0;
+					if($i==4)
+					{
+						$i=0;
 
-				}
-				if($i==0)
-				{
-					echo '</div>';
-					echo '<br>';
-				}
+					}
+					if($i==0)
+					{
+						echo '</div>';
+						echo '<br>';
+					}
+			}
+			if($resultCheck%4!=0)
+			{
+				echo '</div>';
 			}
 		}
 	}

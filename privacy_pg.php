@@ -16,6 +16,9 @@
 			<p>Topics:</p>
 			<ul>
 				<li>What data do we collect?</li>
+				<li>How do we collect your data?</li>
+				<li>How will we use your data?</li>
+				<li>How do we store your data?</li>
 				<li>Marketing</li>
 				<li>What are your data protection rights?</li>
 				<li>What are cookies?</li>
@@ -30,7 +33,31 @@
 		<br>
 		<div class="jumbotron">
 			<h2>What data do we collect?</h2>
-			<p>Livrari la Domiciliu collects no data from our users.</p>
+			<p>Livrari la Domiciliu collects the following data:</p>
+			<ul>
+				<li>Personal identification information (Name, email, address, phone number)</li>
+			</ul>
+		</div>
+		<br>
+		<div class="jumbotron">
+			<h2>How do we collect  your data?</h2>
+			<p>You directly provide Livrari la Domiciliu with all of the data we collect. Your date is collected when you:</p>
+			<ul>
+				<li>Place an order for any of our products.</li>
+			</ul>
+		</div>
+		<br>
+		<div class="jumbotron">
+			<h2>How will we use your data?</h2>
+			<p>We collect your data so that we can:</p>
+			<ul>
+				<li>Process your order and deliver it to you.</li>
+			</ul>
+		</div>
+		<br>
+		<div class="jumbotron">
+			<h2>How do we store your data?</h2>
+			<p>We store your data in a secure database that can only be accessed by the site's administrator and developer.</p>
 		</div>
 		<br>
 		<div class="jumbotron">
@@ -56,20 +83,22 @@
 			<h2>What are cookies?</h2>
 			<p>Cookies are text files placed on your computer to cllect standard Internet log information and visitor behaviour information. When you visit our websites, we do not collect information from you automatically through cookies or similar technology.</p>
 			<br>
-			<p>For furhter information, visit <a href="allaboutcookies.org">allaboutcookies.org</a>.</p>
+			<p>For furhter information, visit <a href="https://www.allaboutcookies.org/">allaboutcookies.org</a>.</p>
 		</div>
 		<br>
 		<div class="jumbotron">
 			<h2>How do we use cookies?</h2>
-			<p>Livrari la domiciliu does not use any cookies from it's users.</p>
+			<p>Livrari la domiciliu uses cookies in a range of ways to improve your experience on our website, including:</p>
+			<ul>
+				<li>Saving the products when you add them to your shopping cart.</li>
+			</ul>
 		</div>
 		<br>
 		<div class="jumbotron">
 			<h2>What types of cookies do we use?</h2>
-			<p>TBA</p>
+			<p>There are a number of different types of cookies, however, our website uses:/p>
 			<ul>
-				<li>TBA</li>
-				<li>TBA</li>
+				<li>Functionality - Livrari la Domiciliu uses these cookies so that features of our website work correctly, for example the shopping cart.</li>
 			</ul>
 		</div>
 		<br>
@@ -85,7 +114,7 @@
 		<br>
 		<div class="jumbotron">
 			<h2>Changes to our privacy policy</h2>
-			<p>Livrari la Domiciliu keeps its privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 29 July, 2019.</p>
+			<p>Livrari la Domiciliu keeps its privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 17 August, 2019.</p>
 		</div>
 		<br>
 		<div class="jumbotron">

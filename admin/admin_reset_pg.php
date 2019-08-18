@@ -1,4 +1,6 @@
 <?php
+	include_once '../includes/conn_inc.php';
+	include 'admin_includes/admin_reset_inc.php';
 	session_start();
 	if(!isset($_SESSION['user']))
 	{
@@ -17,7 +19,23 @@
 </head>
 <body>
 	
-	<?php include 'admin_includes/admin_nav_inc_v.php' ?>	
+	<?php include 'admin_includes/admin_nav_inc_v.php' ?>
+
+	<br>
+	<h1 class="text-center">Resetare cont</h1>
+	<hr>
+
+	<div class="container">
+			<div class="jumbotron">
+				<form action="admin_reset_pg" class="form" method="POST">
+					<label for="actuala">Parola curenta:</label>
+					<input name="psw" class="form-control" type="password" id="actuala">
+					<br>
+					<button name="resetSubmit" class="btn btn-danger">Reseteaza</button>
+				</form>
+
+			</div>
+		</div>	
 
 
 

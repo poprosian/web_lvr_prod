@@ -5,13 +5,13 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<title>Shopping Cart</title>
+	<title>Coș de cumpărături</title>
 </head>
 <body>
 	<?php include 'includes/nav_inc_v.php' ?>	
@@ -23,11 +23,11 @@
 			<?php
 				if(!empty($_SESSION['shopping_cart']))
 				{
-					echo '<h1 class="text-center">Cos de cumparaturi</h1>';
+					echo '<h1 class="text-center">Coș de cumpărături</h1>';
 				}
 				else
 				{
-					echo '<h1 class="text-center">Cosul este gol!</h1>';
+					echo '<h1 class="text-center">Coșul este gol!</h1>';
 				}
 
 			?>
@@ -40,9 +40,9 @@
 							<th scope="col">#</th>
 							<th scope="col">Nume produs</th>
 							<th scope="col">Cantitate</th>
-							<th scope="col">Pret/buc</th>
-							<th scope="col">Pret Total</th>
-							<th scope="col">Actiune</th>
+							<th scope="col">Preț/buc</th>
+							<th scope="col">Preț Total</th>
+							<th scope="col">Acțiune</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -80,6 +80,7 @@
 												';
 												$i++;
 												$total = $total + ($product['cant'] * $row['pret']);
+												$_SESSION['total'] = $total;
 											}
 
 										}
@@ -132,8 +133,8 @@
 							</div>
 							<div class="form-row">
 								<div class="col form-group">
-									<label for="detaliiAdresa">Adresa:</label>
-									<input type="text" class="form-control" placeholder="Strada, bloc, numar, scara" id="detaliiAdresa" name="detaliiAdresa">
+									<label for="detaliiAdresa">Adresă:</label>
+									<input type="text" class="form-control" placeholder="Strada, bloc, număr, scară" id="detaliiAdresa" name="detaliiAdresa">
 								</div>
 								<div class="col form-group">
 									<label for="detaliiAdresa">E-Mail:</label>
@@ -141,26 +142,28 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="detaliiTelefon">Numar de telefon:</label>
+								<label for="detaliiTelefon">Număr de telefon:</label>
 								<input type="tel" class="form-control" placeholder="Numar telefon" id="detaliiTelefon" name="detaliiTelefon">
 							</div>
 							<div class="form-group">
-								<label for="detaliiSuo">Informatii suplimentare:</label>
-								<textarea class="form-control" placeholder="Informatii suplimentare" id="detaliiSup" name="detaliiSup"></textarea>
+								<label for="detaliiSuo">Informații suplimentare:</label>
+								<textarea class="form-control" placeholder="Informații suplimentare" id="detaliiSup" name="detaliiSup"></textarea>
 							</div>
-							<div class="form-group">';
-
-								echo '<input type="submit" class="btn btn-success" value="Trimite comanda!" name="submitComanda">
+							<div class="form-group">
+								
+								<input type="submit" class="btn btn-success" value="Trimite comanda!" name="submitComanda">
 							</div>
 						</form>';
+
 				}
 			?>
 		</div>
 	</div>
-
+	<?php include "includes/footer_inc_v.php"; ?>
 	<script type="text/javascript" src="javascript/search.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
 </body>
 </html>

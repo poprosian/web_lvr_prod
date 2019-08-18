@@ -11,7 +11,6 @@
 	    	$sql2 = "DELETE FROM produse WHERE id_produs = '".$id."';";
 	    	mysqli_query($conn,$sql2);
 	    	unlink("../images/product_images/".$row['image']."");
-	    	header("Location: admin_panel_pg");
 
 		}
 	}

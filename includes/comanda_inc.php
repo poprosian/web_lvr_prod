@@ -14,6 +14,7 @@
 		$telefon = $_POST['detaliiTelefon'];
 		$adresa = $_POST['detaliiAdresa'];
 		$sup = $_POST['detaliiSup'];
+		$total = $_SESSION['total'];
 		$data = time();
 
 		if(empty($nume) || empty($prenume) || empty($email) || empty($telefon) || empty($adresa))
@@ -23,7 +24,7 @@
 		}
 		else
 		{
-			$sql = "INSERT INTO comenzi (nume, prenume, adresa, email, telefon, sup, data) VALUES (?, ?, ?, ?, ?, ?, ?);";
+			$sql = "INSERT INTO comenzi (nume, prenume, adresa, email, telefon, sup, total, data) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
 			$stmt = mysqli_stmt_init($conn);
 			if(!mysqli_stmt_prepare($stmt,$sql))
 			{
@@ -32,7 +33,7 @@
 			}
 			else
 			{
-				mysqli_stmt_bind_param($stmt, "sssssss", $nume,$prenume,$adresa,$email,$telefon,$sup,$data);
+				mysqli_stmt_bind_param($stmt, "ssssssss", $nume,$prenume,$adresa,$email,$telefon,$sup,$total,$data);
 				mysqli_stmt_execute($stmt);
 
 				$sql = "SELECT * FROM comenzi WHERE data = ".$data.";";
@@ -65,14 +66,14 @@
 				}
 				unset($_SESSION['shopping_cart']);
 				header("Location: index");
-				
+				$config = parse_ini_file('configs/email.ini');
 				$mail = new PHPMailer(true);
 				try{
 					$mail->isSMTP();
 					$mail->Host = 'smtp.gmail.com';
 					$mail->SMTPAuth = true;
-					$mail->Username = 'livrariladomiciliufr@gmail.com';
-					$mail->Password ='flaviu123';
+					$mail->Username = $config['username'];
+					$mail->Password = $config['password'];
 					$mail->SMTPSecure = 'tsl';
 					$mail->Port = 587;
 
@@ -80,7 +81,7 @@
 					$mail->addAddress('poprosian@gmail.com');
 					$mail->isHTML(true);
 					$mail->Subject = "[admin] Comanda #".$EidComanda." plasata";
-					$mail->Body = "Comanda cu numarul  #".$EidComanda." a fost plasata de catre ".$nume." ".$prenume.". Click <a href='http://86.126.210.151/admin/admin_comenzi_pg'>AICI.</a>";
+					$mail->Body = "Comanda cu numarul  #".$EidComanda." a fost plasata de catre ".$nume." ".$prenume.". Click <a href='http://86.126.210.151/admin/admin_comenzi_pg'>AICI</a>.";
 					$mail->send();
 				} catch (Exception $e){
 					echo 'Email could not be sent.';
