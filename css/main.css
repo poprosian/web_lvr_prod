@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+main {
+	background-color: white;
+	padding: 2em;
+	margin: 0px;
+}
+
+nav {
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#68327d+1,f44c72+100 */
+	background: #68327d; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #68327d 1%, #f44c72 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #68327d 1%,#f44c72 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #68327d 1%,#f44c72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68327d', endColorstr='#f44c72',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+@media only screen and (min-width: 768px) {
+	body {
+		padding: 0em;
+	}
+
+	
+	.hover {
+		display: inline-block;
+		position: relative;
+	}
+
+	.hover::before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		transform: scaleX(0);
+		height: 2px;
+		bottom: 0;;
+		background-color: white;
+		transform-origin:  bottom right;
+		transition: transform 0.25s ease-out;
+	}
+
+	.hover:hover::before{
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
+
+	.navbar{
+		padding: 1em;
+	}
+}
