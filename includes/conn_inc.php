@@ -5,7 +5,7 @@ $conn = mysqli_connect($config['servername'], $config['username'], $config['pass
 
 if($conn->connect_error)
 {
-	die("Connection failed: " .  $conn->connection_error);
+	die("Connection failed: " . $conn->connection_error);
 }
 
 
