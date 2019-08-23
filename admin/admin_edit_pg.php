@@ -46,12 +46,22 @@
 				<label for="idCat">Categorie:</label>
 				<select class="form-control" name="selectProdus" id="idCat">
 				    <option value="NULL">Categorie...</option>
-				    <option value="fructe" <?php if($editRow['tag']=="fructe") echo 'selected';?>>Fructe</option>
-					<option value="legume" <?php if($editRow['tag']=="legume") echo 'selected';?>  >Legume</option>
-					<option value="carne" <?php if($editRow['tag']=="carne") echo 'selected';?>>Carne</option>
-					<option value="mezeluri" <?php if($editRow['tag']=="mezeluri") echo 'selected';?>>Mezeluri</option>
-					<option value="paine" <?php if($editRow['tag']=="paine") echo 'selected';?>>Paine</option>
-					<option value="dulciuri" <?php if($editRow['tag']=="dulciuri") echo 'selected';?>>Dulciuri</option>
+				    <option value="baza">Alimente de baza</option>
+				    <option value="dulceata">Dulceata, gem</option>
+				    <option value="compot">Compot, miere</option>
+				    <option value="condimente">Condimente</option>
+				    <option value="conserve">Conserve si muraturi</option>
+				    <option value="ingrediente">Ingrediente</option>
+				    <option value="cafea">Cafea</option>
+				    <option value="ceaiuri">Ceaiuri</option>
+				    <option value="dulciuri">Dulciuri si snacks</option>
+				    <option value="sucuri">Sucuri si ape</option>
+				    <option value="fructe">Fructe si legume</option>
+				    <option value="ruski">Produse Rusesti</option>
+				    <option value="peste">Produse din peste</option>
+					<option value="congelate">Congelate</option>
+					<option value="lactate">Lactate</option>
+					<option value="mezeluri">Mezeluri</option>
 			    </select>
 			</div>
 
