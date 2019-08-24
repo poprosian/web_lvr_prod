@@ -39,12 +39,13 @@
 						    <button class="dropdown-item" name="submitCategorie" value="condimente">Condimente</button>
 						    <button class="dropdown-item" name="submitCategorie" value="conserve">Conserve si muraturi</button>
 						    <button class="dropdown-item" name="submitCategorie" value="ingrediente">Ingrediente</button>
-						    <button class="dropdown-item" name="submitCategorie" value="cafea">Cafea</button>
-						    <button class="dropdown-item" name="submitCategorie" value="ceaiuri">Ceaiuri</button>
+						    <button class="dropdown-item" name="submitCategorie" value="cafea">Cafea, ceaiuri</button>
+						    <button class="dropdown-item" name="submitCategorie" value="nidas">Prajituri Nidas</button>
 			  			</div>
 			  			
 			  			<div class="col-sm-6">
 			  				<button class="dropdown-item" name="submitCategorie" value="dulciuri">Dulciuri si snacks</button>
+			  				<button class="dropdown-item" name="submitCategorie" value="alcool">Alcool</button>
 						    <button class="dropdown-item" name="submitCategorie" value="sucuri">Sucuri si ape</button>
 						    <button class="dropdown-item" name="submitCategorie" value="fructeleg">Fructe si legume</button>
 						    <button class="dropdown-item" name="submitCategorie" value="ruski">Produse Rusesti</button>
