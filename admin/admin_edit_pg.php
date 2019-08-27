@@ -53,7 +53,6 @@
 				    <option value="conserve">Conserve si muraturi</option>
 				    <option value="ingrediente">Ingrediente</option>
 				    <option value="cafea">Cafeam ceaiuri</option>
-				    <option value="nidas">Prajituri Nidas</option>
 				    <option value="dulciuri">Dulciuri si snacks</option>
 				    <option value="alcool">Alcool</option>
 				    <option value="sucuri">Sucuri si ape</option>
@@ -63,6 +62,9 @@
 					<option value="congelate">Congelate</option>
 					<option value="lactate">Lactate</option>
 					<option value="mezeluri">Mezeluri</option>
+					<option value="prajituri">Prajituri</option>
+					<option value="fursecuri">Fursecuri si saratele</option>
+					<option value="torturi">Torturi</option>
 			    </select>
 			</div>
 

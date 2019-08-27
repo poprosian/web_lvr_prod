@@ -20,9 +20,11 @@
 			<div class="row justify-content-center">
 					<h1>Bine ati venit</h1>
 			</div>
+		</div>
 			<br>
-			<div class="row">
-				<p>Din dorinţa de a pune pe mesele dumneavoastră produse româneşti, a luat naştere ideea mea de a le cumpăra şi a le livra la domiciliu. Deoarece chiar dacă de multe ori ne dorim să ajungem la un magazin cu produse româneşti, ne stă în cale lipsa timpului, aglomeraţia, lipsa locurilor de parcare, faptul că cel mai apropiat magazin se află la o distanţa destul de mare, aşa că vreau să duc alimentele pe care le doriţi direct la uşa dumneavoastră.</p>
+		<div class="container">
+			<div class="row justify-content-center">
+					<p>Din dorinţa de a pune pe mesele dumneavoastră produse româneşti, a luat naştere ideea mea de a le cumpăra şi a le livra la domiciliu. Deoarece chiar dacă de multe ori ne dorim să ajungem la un magazin cu produse româneşti, ne stă în cale lipsa timpului, aglomeraţia, lipsa locurilor de parcare, faptul că cel mai apropiat magazin se află la o distanţa destul de mare, aşa că vreau să duc alimentele pe care le doriţi direct la uşa dumneavoastră.</p>
 
 				<p> Produsele vor fi achiziţionate din magazinul românesc aflat în zona noastră deoarece am descoperit în cadrul acestora exact ceea ce căutam produse de calitate, alese cu grijă pentru toate gusturile. Tot ce trebuie să faceți este să plasați o comandă pe site, stabilim împreună intervalul orar de livrare, iar de restul mă ocup eu.</p>
 				<p> 

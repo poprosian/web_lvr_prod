@@ -55,6 +55,9 @@
 					<option value="congelate">Congelate</option>
 					<option value="lactate">Lactate</option>
 					<option value="mezeluri">Mezeluri</option>
+					<option value="prajituri">Prajituri</option>
+					<option value="fursecuri">Fursecuri si saratele</option>
+					<option value="torturi">Torturi</option>
 			    </select>
 			</div>
 

@@ -26,7 +26,7 @@
 			<p>Alegeți tipul de aliment: </p>
 			<div class="dropdown">
 			  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			    Alege categoria...
+			    Produse romanesti
 			  </button>
 			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 			  	<form action="products_pg" method="POST">
@@ -40,11 +40,10 @@
 						    <button class="dropdown-item" name="submitCategorie" value="conserve">Conserve si muraturi</button>
 						    <button class="dropdown-item" name="submitCategorie" value="ingrediente">Ingrediente</button>
 						    <button class="dropdown-item" name="submitCategorie" value="cafea">Cafea, ceaiuri</button>
-						    <button class="dropdown-item" name="submitCategorie" value="nidas">Prajituri Nidas</button>
+						    <button class="dropdown-item" name="submitCategorie" value="dulciuri">Dulciuri si snacks</button>
 			  			</div>
 			  			
 			  			<div class="col-sm-6">
-			  				<button class="dropdown-item" name="submitCategorie" value="dulciuri">Dulciuri si snacks</button>
 			  				<button class="dropdown-item" name="submitCategorie" value="alcool">Alcool</button>
 						    <button class="dropdown-item" name="submitCategorie" value="sucuri">Sucuri si ape</button>
 						    <button class="dropdown-item" name="submitCategorie" value="fructeleg">Fructe si legume</button>
@@ -55,6 +54,20 @@
 						    <button class="dropdown-item" name="submitCategorie" value="mezeluri">Mezeluri</button>
 			  			</div>
 			  		</div>
+				    
+				</form>
+				</div>
+			</div>
+
+			<div class="dropdown">
+			  <button style="margin: 2px;" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Produse cofetarie Nidas Art Cakes
+			  </button>
+			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			  	<form action="products_pg" method="POST">
+			  		<button class="dropdown-item" name="submitCategorie" value="prajituri">Prajituri</button>
+			  		<button class="dropdown-item" name="submitCategorie" value="fursecuri">Fursecuri si saratele</button>
+			  		<button class="dropdown-item" name="submitCategorie" value="torturi">Torturi</button>
 				    
 				</form>
 				</div>
