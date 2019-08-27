@@ -26,7 +26,7 @@
 			<p>Alegeți tipul de aliment: </p>
 			<div class="dropdown">
 			  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			    Produse romanesti
+			    Produse magazin romanesc
 			  </button>
 			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 			  	<form action="products_pg" method="POST">
