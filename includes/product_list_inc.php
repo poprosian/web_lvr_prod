@@ -1,11 +1,9 @@
 <?php
-
+	include_once 'conn_inc.php';
 	$sql = " SELECT * FROM produse;";
 	$result = mysqli_query($conn,$sql);
 	$resultCheck = mysqli_num_rows($result);
-	$i=0;
 
- 
 	if(isset($_POST['submitCategorie']))
 	{
 		$categorie = $_POST['submitCategorie'];
@@ -13,102 +11,84 @@
 		{
 			while($row = mysqli_fetch_assoc($result))
 			{
-
 				if($categorie == "toate")
 				{
 
-					if($i==0)
-					{
-						echo '<div class="row">';
-					}
-						echo '<div class="col-xl-3 col-md-6">';
-							echo '<div class="card" style="margin: 0.5em;"> ';
-								echo '<img class="card-img-top" src="images/product_images/' . $row['image'] . '" alt="Card image cap">';
-								echo '<div class="card-body">';
-								echo '<h5 class="card-title text-center">' . ucfirst($row['titlu']) . '</h5>';
-								echo '<p class="card-text text-center">' . $row['descriere'] . '</p>';
-								echo '<hr>';
-								echo '<p class="text-center"><b>Pret:</b> '.$row['pret'].'€</p>';
-								echo '<hr>';
-								echo '<form method="POST" action="includes/cos_inc.php" class="ajax">';
-									echo '
-											
-
-											
-											<input style="width: 3em;" type="number" value="1" class="float-left" maxlength="2" min="1" name="cantitate">
-											<input style="display:none;"  value="'.$row['id_produs'].'" name="id_produs">
-											<input type="submit" value="Adauga in cos" class="btn btn-sm btn-primary float-right cartButton" onclick="notif();badge();">
-
-										';
-								echo '</form>';
-								echo '</div>';
-							echo '</div>'; 
-						echo '</div>';
-
-					
-					$i++;
-					if($i==4)
-					{
-						$i=0;
-
-					}
-					if($i==0)
-					{
-						echo '</div>';
-					}
-
+				echo '<div class="col-xl-3 col-sm-6 col-12  pdg">
+									<div class="card cCard">
+										<div class="text-center">
+											<img style="max-height: 170px; max-width: 170px;" src="images/product_images/'.$row['image'].'" alt=""  class="card-img-top">
+										</div>
+										<div>
+										
+											<h5 class="card-title cardTitle">'.ucfirst($row['titlu']).'</h5>
+											<div class="sideHr"></div>
+											<br>
+											<p class="card-text cardText">'.$row['pret'].'€</p>
+											<form method="POST" action="includes/cos_inc.php" class="ajax">
+												<input style="display:none;" type="number" value="1" class="float-left" maxlength="2" min="1" name="cantitate">
+												<input style="display:none;"  value="'.$row['id_produs'].'" name="id_produs">
+												<input type="submit" onclick="notif();badge();" class="cardButton  btn-block mt-auto" value="ADAUGA IN COS">
+											</form>
+										</div>
+									</div>
+								</div>';
 
 				}
 				else if($categorie == $row['tag'])
 				{
-					if($i==0)
-					{
-						echo '<div class="row">';
-					}
-					
-						echo '<div class="col-xl-3 col-md-6">';
-							echo '<div class="card" style="margin: 0.5em;"> ';
-								echo '<img class="card-img-top" src="images/product_images/' . $row['image'] . '" alt="Card image cap">';
-								echo '<div class="card-body">';
-								echo '<h5 class="card-title text-center">' . ucfirst($row['titlu']) . '</h5>';
-								echo '<p class="card-text text-center">' . $row['descriere'] . '</p>';
-								echo '<hr>';
-								echo '<p class="text-center"><b>Pret:</b> '.$row['pret'].'€</p>';
-								echo '<hr>';
-								echo '<form method="POST" action="includes/cos_inc.php" class="ajax">';
-									echo '
-											
 
-											
-											<input style="width: 3em;" type="number" value="1" class="float-left" maxlength="2" min="1" name="cantitate">
-											<input style="display:none;"  value="'.$row['id_produs'].'" name="id_produs">
-											<input type="submit" value="Adauga in cos" class="btn btn-sm btn-primary float-right cartButton" onclick="notif();badge();">
+						echo '<div class="col-xl-3 col-sm-6 col-12  pdg">
+									<div class="card cCard">
+										<div class="text-center">
+											<img style="max-height: 170px; max-width: 170px;" src="images/product_images/'.$row['image'].'" alt=""  class="card-img-top">
+										</div>
+										<div>
+										
+											<h5 class="card-title cardTitle">'.ucfirst($row['titlu']).'</h5>
+											<div class="sideHr"></div>
+											<br>
+											<p class="card-text cardText">'.$row['pret'].'€</p>
+											<form method="POST" action="includes/cos_inc.php" class="ajax">
+												<input style="display:none;" type="number" value="1" class="float-left" maxlength="2" min="1" name="cantitate">
+												<input style="display:none;"  value="'.$row['id_produs'].'" name="id_produs">
+												<input type="submit" onclick="notif();badge();" class="cardButton  btn-block mt-auto" value="ADAUGA IN COS">
+											</form>
+										</div>
+									</div>
+								</div>';
 
-										';
-								echo '</form>';
-								echo '</div>';
-							echo '</div>'; 
-						echo '</div>';
 
-					
-					$i++;
-					if($i==4)
-					{
-						$i=0;
-
-					}
-					if($i==0)
-					{
-						echo '</div>';
-						echo '<br>';
-					}
 				}
 				
 			}
-
-			if($resultCheck%4!=0)
+		}
+	}
+	else if(!isset($_POST['submitCategorie']) && !isset($_GET['globalSearch']))
+	{
+		if($resultCheck > 0)
+		{
+			while($row = mysqli_fetch_assoc($result))
 			{
-				echo '</div>';
+				echo '<div class="col-xl-3 col-sm-6 col-12  pdg">
+									<div class="card cCard">
+										<div class="text-center">
+											<img style="max-height: 170px; max-width: 170px;" src="images/product_images/'.$row['image'].'" alt=""  class="card-img-top">
+										</div>
+										<div>
+										
+											<h5 class="card-title cardTitle">'.ucfirst($row['titlu']).'</h5>
+											<div class="sideHr"></div>
+											<br>
+											<p class="card-text cardText">'.$row['pret'].'€</p>
+											<form method="POST" action="includes/cos_inc.php" class="ajax">
+												<input style="display:none;" type="number" value="1" class="float-left" maxlength="2" min="1" name="cantitate">
+												<input style="display:none;"  value="'.$row['id_produs'].'" name="id_produs">
+												<input type="submit" onclick="notif();badge();" class="cardButton  btn-block mt-auto" value="ADAUGA IN COS">
+											</form>
+										</div>
+									</div>
+								</div>';
 			}
 		}
 	}

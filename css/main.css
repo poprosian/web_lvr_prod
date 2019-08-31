@@ -1,15 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
 
 body{
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
-main {
-	background-color: white;
-	padding: 2em;
-	margin: 0px;
-}
 
 nav {
 		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#68327d+1,f44c72+100 */
@@ -22,9 +17,6 @@ nav {
 
 
 @media only screen and (min-width: 768px) {
-	body {
-		padding: 0em;
-	}
 
 	
 	.hover {

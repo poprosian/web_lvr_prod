@@ -15,7 +15,7 @@
 	
 	<?php include 'includes/nav_inc_v.php'; ?>
 
-	<main>
+	<main style="padding: 2em;">
 		<div class="container">
 			<div class="row justify-content-center">
 					<h1>Bine ati venit</h1>
