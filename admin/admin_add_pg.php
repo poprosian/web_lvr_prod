@@ -47,7 +47,7 @@
 					    <option value="ingrediente">Ingrediente</option>
 					    <option value="cafea">Cafea, ceaiuri</option>
 					    <option value="dulciuri">Dulciuri si snacks</option>
-					    <option value="alcool">Alcool</option>
+					    <option value="bauturi">Bauturi</option>
 					    <option value="sucuri">Sucuri si ape</option>
 					    <option value="fructe">Fructe si legume</option>
 					    <option value="ruski">Produse Rusesti</option>

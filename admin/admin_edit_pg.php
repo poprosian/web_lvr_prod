@@ -45,26 +45,30 @@
 			<div class="form-group">
 				<label for="idCat">Categorie:</label>
 				<select class="form-control" name="selectProdus" id="idCat">
-				    <option <?php if($editRow['tag'] == "NULL") echo 'selected'; ?> value="NULL">Categorie...</option>
-				    <option <?php if($editRow['tag'] == "baza") echo 'selected'; ?>  value="baza">Alimente de baza</option>
-				    <option <?php if($editRow['tag'] == "dulceata") echo 'selected'; ?>  value="dulceata">Dulceata, gem</option>
-				    <option <?php if($editRow['tag'] == "compot") echo 'selected'; ?>  value="compot">Compot, miere</option>
-				    <option <?php if($editRow['tag'] == "condimente") echo 'selected'; ?>  value="condimente">Condimente</option>
-				    <option <?php if($editRow['tag'] == "conserve") echo 'selected'; ?>  value="conserve">Conserve si muraturi</option>
-				    <option <?php if($editRow['tag'] == "ingrediente") echo 'selected'; ?>  value="ingrediente">Ingrediente</option>
-				    <option <?php if($editRow['tag'] == "cafea") echo 'selected'; ?>  value="cafea">Cafeam ceaiuri</option>
-				    <option <?php if($editRow['tag'] == "dulciuri") echo 'selected'; ?>  value="dulciuri">Dulciuri si snacks</option>
-				    <option <?php if($editRow['tag'] == "alcool") echo 'selected'; ?>  value="alcool">Alcool</option>
-				    <option <?php if($editRow['tag'] == "sucuri") echo 'selected'; ?>  value="sucuri">Sucuri si ape</option>
-				    <option <?php if($editRow['tag'] == "fructe") echo 'selected'; ?>  value="fructe">Fructe si legume</option>
-				    <option <?php if($editRow['tag'] == "ruski") echo 'selected'; ?>  value="ruski">Produse Rusesti</option>
-				    <option <?php if($editRow['tag'] == "peste") echo 'selected'; ?>  value="peste">Produse din peste</option>
-					<option <?php if($editRow['tag'] == "congelate") echo 'selected'; ?>  value="congelate">Congelate</option>
-					<option <?php if($editRow['tag'] == "lactate") echo 'selected'; ?>  value="lactate">Lactate</option>
-					<option <?php if($editRow['tag'] == "mezeluri") echo 'selected'; ?>  value="mezeluri">Mezeluri</option>
-					<option <?php if($editRow['tag'] == "prajituri") echo 'selected'; ?>  value="prajituri">Prajituri</option>
-					<option <?php if($editRow['tag'] == "fursecuri") echo 'selected'; ?>  value="fursecuri">Fursecuri si saratele</option>
-					<option <?php if($editRow['tag'] == "torturi") echo 'selected'; ?>  value="torturi">Torturi</option>
+					<optgroup>
+					    <option <?php if($editRow['tag'] == "NULL") echo 'selected'; ?> value="NULL">Categorie...</option>
+					    <option <?php if($editRow['tag'] == "baza") echo 'selected'; ?>  value="baza">Alimente de baza</option>
+					    <option <?php if($editRow['tag'] == "dulceata") echo 'selected'; ?>  value="dulceata">Dulceata, gem</option>
+					    <option <?php if($editRow['tag'] == "compot") echo 'selected'; ?>  value="compot">Compot, miere</option>
+					    <option <?php if($editRow['tag'] == "condimente") echo 'selected'; ?>  value="condimente">Condimente</option>
+					    <option <?php if($editRow['tag'] == "conserve") echo 'selected'; ?>  value="conserve">Conserve si muraturi</option>
+					    <option <?php if($editRow['tag'] == "ingrediente") echo 'selected'; ?>  value="ingrediente">Ingrediente</option>
+					    <option <?php if($editRow['tag'] == "cafea") echo 'selected'; ?>  value="cafea">Cafeam ceaiuri</option>
+					    <option <?php if($editRow['tag'] == "dulciuri") echo 'selected'; ?>  value="dulciuri">Dulciuri si snacks</option>
+					    <option <?php if($editRow['tag'] == "bauturi") echo 'selected'; ?>  value="bauturi">bauturi</option>
+					    <option <?php if($editRow['tag'] == "sucuri") echo 'selected'; ?>  value="sucuri">Sucuri si ape</option>
+					    <option <?php if($editRow['tag'] == "fructe") echo 'selected'; ?>  value="fructe">Fructe si legume</option>
+					    <option <?php if($editRow['tag'] == "ruski") echo 'selected'; ?>  value="ruski">Produse Rusesti</option>
+					    <option <?php if($editRow['tag'] == "peste") echo 'selected'; ?>  value="peste">Produse din peste</option>
+						<option <?php if($editRow['tag'] == "congelate") echo 'selected'; ?>  value="congelate">Congelate</option>
+						<option <?php if($editRow['tag'] == "lactate") echo 'selected'; ?>  value="lactate">Lactate</option>
+						<option <?php if($editRow['tag'] == "mezeluri") echo 'selected'; ?>  value="mezeluri">Mezeluri</option>
+					</optgroup>
+					<optgroup label="Nidas">
+						<option <?php if($editRow['tag'] == "prajituri") echo 'selected'; ?>  value="prajituri">Prajituri</option>
+						<option <?php if($editRow['tag'] == "fursecuri") echo 'selected'; ?>  value="fursecuri">Fursecuri si saratele</option>
+						<option <?php if($editRow['tag'] == "torturi") echo 'selected'; ?>  value="torturi">Torturi</option>
+					</optgroup>
 			    </select>
 			</div>
 

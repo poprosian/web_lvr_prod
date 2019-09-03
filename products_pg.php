@@ -14,6 +14,13 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
 	<title>Produse</title>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({
+	          google_ad_client: "ca-pub-4581171905000923",
+	          enable_page_level_ads: true
+	     });
+	</script>
 	
 
 </head>
@@ -47,7 +54,7 @@
 						<button v-on:click.prevent="requestProduse('ingrediente')">Ingrediente</button>
 						<button v-on:click.prevent="requestProduse('cafea')">Cafea si ceai</button>
 						<button v-on:click.prevent="requestProduse('dulciuri')">Dulciuri si snacks</button>
-						<button v-on:click.prevent="requestProduse('alcool')">Alcool</button>
+						<button v-on:click.prevent="requestProduse('bauturi')">Bauturi</button>
 						<button v-on:click.prevent="requestProduse('sucuri')">Suc si apa</button>
 						<button v-on:click.prevent="requestProduse('fructe')">Fructe si legume</button>
 						<button v-on:click.prevent="requestProduse('ruski')">Produse Rusesti</button>
@@ -86,7 +93,7 @@
 								<button v-on:click.prevent="requestProduse('ingrediente')">Ingrediente</button>
 								<button v-on:click.prevent="requestProduse('cafea')">Cafea si ceai</button>
 								<button v-on:click.prevent="requestProduse('dulciuri')">Dulciuri si snacks</button>
-								<button v-on:click.prevent="requestProduse('alcool')">Alcool</button>
+								<button v-on:click.prevent="requestProduse('bauturi')">Bauturi</button>
 								<button v-on:click.prevent="requestProduse('sucuri')">Suc si apa</button>
 								<button v-on:click.prevent="requestProduse('fructe')">Fructe si legume</button>
 								<button v-on:click.prevent="requestProduse('ruski')">Produse Rusesti</button>

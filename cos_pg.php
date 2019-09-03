@@ -14,6 +14,13 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/cos.css">
 	<title>Coș de cumpărături</title>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({
+	          google_ad_client: "ca-pub-4581171905000923",
+	          enable_page_level_ads: true
+	     });
+	</script>
 </head>
 <body>
 	<?php include 'includes/nav_inc_v.php' ?>	
