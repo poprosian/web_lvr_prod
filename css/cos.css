@@ -1,0 +1,183 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: hsl(210, 36%, 96%)!important;
+}
+
+.tabelDesktop{
+	display: none;
+}
+
+.tabelMobil{
+	display: block;
+}
+
+.cardMobilCos{
+	position: relative;
+	width: 100%;
+	height: 90px;
+	background-color: white;
+	border-radius: 12px;
+	box-shadow: 1px 1px 5px hsla(0,0%,0%,0.25);
+}
+
+
+.xBtn:focus{
+	outline: none;
+}
+
+.xBtn{
+	font-size: 20px;
+	text-decoration: none;
+	color: #1F2933;
+	display: block;
+	margin-left: auto;
+	border: none;
+	background: none;
+}
+
+.cardQty{
+	width: 25px;
+	height: 25px;
+	background-color: #FFF3C4;
+	position: absolute;
+	bottom: 11px;
+	left: 16px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.cardQty > .qtyP{
+	text-align: center;
+	vertical-align: middle;
+	font-size: 18px;
+	color: #8D2B0B;
+	font-weight: bold;
+}
+
+.bucati{
+	font-size: 20px;
+	position: absolute;
+	bottom: 8px;
+	margin: 0px;
+	left: 50px;
+	color: #9AA5B1;
+}
+
+.cardMobilCos > h2{
+	color: #1F2933;
+	margin-bottom: 0px;
+	margin-top: -16px;
+	text-align: center;
+	font-size: 24px;
+}
+
+.pret{
+	position: absolute;
+	font-size: 20px;
+	color: #323F4B;	
+	bottom: 8px;
+	margin: 0px;
+	right: 16px;
+	display: inline-block;
+}
+.totalMobil{
+		display: block;
+	}
+
+
+.delBtn:hover{
+	text-decoration: none;
+	color: white;
+}
+
+.delBtn{
+	position: absolute;
+	background-color: #E12D39;
+	border: none;
+	text-decoration: none;
+	color: white;
+	height: 90px;
+	font-size: 24px;
+	line-height: 90px;
+	margin-top: -90px;
+	width: 20%;
+	right: 0px;
+	border-radius: 12px;
+	text-align: center;
+
+}
+
+#comision{
+	position: absolute;
+	font-size: 24px;
+	color: #323F4B;	
+	bottom: 8px;
+	margin: 0px;
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+}
+
+
+.qtyPlus{
+	font-weight: bold;
+	bottom: 11px;
+	height: 35px;
+	width: 35px;
+	position: absolute;
+	border-radius: 50%;
+	left: 65%;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	color: #1F2933;
+	display: grid;
+	place-items: center;
+}
+
+.qtyPlus:hover{
+	text-decoration: none;
+	color: #1F2933; 
+}
+.qtyMinus:hover{
+	text-decoration: none;
+	color: #1F2933;
+}
+
+.qtyMinus{
+	font-weight: bold;
+	bottom: 11px;
+	height: 35px;
+	width: 35px;
+	position: absolute;
+	border-radius: 50%;
+	left: 30%;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	color: #1F2933;
+	display: grid;
+	place-items: center;
+}
+
+.displayShow{
+	display: block!important; 
+}
+[v-cloak] {
+  display: none;
+}
+
+@media only screen and (min-width: 768px){ 
+
+	.tabelDesktop{
+		display: block;
+	}
+
+	.tabelMobil{
+		display: none;
+	}
+	.totalMobil{
+		display: none;
+	}
+
+}

@@ -16,20 +16,32 @@
 				<a  href="cos_pg" class="nav-link"><img id="cosIcon" src="images/shopping-cart-white.svg"  alt="CART"><span id="badgeSpan" class="badge badge-pill badge-success"></span></a>
 			</li>
 			<li class="nav-item">
-				<form class="form-inline" action="products_pg" method="GET">
-					<input class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Search" style="display: none;" id="searchBox" name="globalSearch">
-					<a href="#" class="nav-link" id="searchIcon">
+				<?php
+			 		if($menuName!='products_pg.php')
+			 		{
+			 	?> <a href="products_pg" class="nav-link" id="searchIcon">
 						<img src="images/search-white.svg" alt="Search">
 					</a>
-					<a href="#" class="nav-link" id="searchCancel" style="display: none;">
-						<img src="images/cancel-white.svg" alt="">
-					</a>
-				</form>
+				<?php
+			 		}
+			 		else{
+			 	?>
+			 		<form v-on:submit.prevent class="form-inline">
+						<input v-model="globalSearch" v-on:keyup.enter="requestProduse('baza',1,globalSearch);"  class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Search" style="display: none;" id="searchBox" name="globalSearchInput">
+						<a href="#" class="nav-link" id="searchIcon">
+							<img src="images/search-white.svg" alt="Search">
+						</a>
+						<a href="#" class="nav-link" id="searchCancel" style="display: none;">
+							<img src="images/cancel-white.svg" alt="">
+						</a>
+					</form>
+				<?php
+			 		}
+			 	?>
+				
 				
 			</li>
 		</ul>
 	</div>
-	
-	
 </nav>
 

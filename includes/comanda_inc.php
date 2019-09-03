@@ -14,7 +14,7 @@
 		$telefon = $_POST['detaliiTelefon'];
 		$adresa = $_POST['detaliiAdresa'];
 		$sup = $_POST['detaliiSup'];
-		$total = $_SESSION['total'];
+		$total = $_POST['totalComanda'];
 		$data = time();
 
 		if(empty($nume) || empty($prenume) || empty($telefon) || empty($adresa))
@@ -70,7 +70,7 @@
 				}
 				unset($_SESSION['shopping_cart']);
 				header("Location: index");
-				$config = parse_ini_file('configs/email.ini');
+				$config = parse_ini_file('D:/xampp/htdocs/configs/email.ini');
 				$mail = new PHPMailer(true);
 				try{
 					$mail->isSMTP();

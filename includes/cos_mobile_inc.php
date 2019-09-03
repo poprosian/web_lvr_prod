@@ -1,32 +1,28 @@
 <?php
 	include_once 'conn_inc.php';
+	include_once 'cos_inc.php';
 	$sql = " SELECT * FROM produse;";
 	$result = mysqli_query($conn,$sql);
+	$response = [];
 	$resultCheck = mysqli_num_rows($result);
-
-	if(isset($_GET['submitCategorie']))
+	if(!empty($_SESSION['shopping_cart']))
 	{
-		$categorie = $_GET['submitCategorie'];
+
 		if($resultCheck > 0)
 		{
 			while($row = mysqli_fetch_assoc($result))
 			{
-				if($categorie == "toate")
+				foreach($_SESSION['shopping_cart'] as $key => $product)
 				{
-					$response[] = $row;
-				}
-				else if($categorie == $row['tag'])
-				{
-					$response[] = $row;
-				}
-				else if($categorie == "n-toate")
-				{
-					if(substr($row['tag'],0,2) == "n-")
+					if($row['id_produs'] == $product['id'])
+					{
+						$row['cant'] = $product['cant'];
 						$response[] = $row;
+					}
 				}
-				
 			}
 			echo json_encode($response);
+
 		}
 
 	}

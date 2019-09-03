@@ -37,26 +37,30 @@
 
 			<div class="form-group">
 				<select class="form-control" name="selectProdus">
-				    <option value="NULL">Categorie...</option>
-				    <option value="baza">Alimente de baza</option>
-				    <option value="dulceata">Dulceata, gem</option>
-				    <option value="compot">Compot, miere</option>
-				    <option value="condimente">Condimente</option>
-				    <option value="conserve">Conserve si muraturi</option>
-				    <option value="ingrediente">Ingrediente</option>
-				    <option value="cafea">Cafea, ceaiuri</option>
-				    <option value="dulciuri">Dulciuri si snacks</option>
-				    <option value="alcool">Alcool</option>
-				    <option value="sucuri">Sucuri si ape</option>
-				    <option value="fructe">Fructe si legume</option>
-				    <option value="ruski">Produse Rusesti</option>
-				    <option value="peste">Produse din peste</option>
-					<option value="congelate">Congelate</option>
-					<option value="lactate">Lactate</option>
-					<option value="mezeluri">Mezeluri</option>
-					<option value="prajituri">Prajituri</option>
-					<option value="fursecuri">Fursecuri si saratele</option>
-					<option value="torturi">Torturi</option>
+					<optgroup>
+					    <option value="NULL">Categorie...</option>
+					    <option value="baza">Alimente de baza</option>
+					    <option value="dulceata">Dulceata, gem</option>
+					    <option value="compot">Compot, miere</option>
+					    <option value="condimente">Condimente</option>
+					    <option value="conserve">Conserve si muraturi</option>
+					    <option value="ingrediente">Ingrediente</option>
+					    <option value="cafea">Cafea, ceaiuri</option>
+					    <option value="dulciuri">Dulciuri si snacks</option>
+					    <option value="alcool">Alcool</option>
+					    <option value="sucuri">Sucuri si ape</option>
+					    <option value="fructe">Fructe si legume</option>
+					    <option value="ruski">Produse Rusesti</option>
+					    <option value="peste">Produse din peste</option>
+						<option value="congelate">Congelate</option>
+						<option value="lactate">Lactate</option>
+						<option value="mezeluri">Mezeluri</option>
+					</optgroup>
+					<optgroup label="Nidas">
+						<option value="n-prajituri">Prajituri</option>
+						<option value="n-fursecuri">Fursecuri si saratele</option>
+						<option value="n-torturi">Torturi</option>
+					</optgroup>
 			    </select>
 			</div>
 
