@@ -43,12 +43,16 @@ Vue.component('tabel-mobil', {
 		{
 			axios.get('../includes/cos_inc.php?action='+action+'&id='+id)
 			.then((response) =>{
-				
+				this.$emit('request-cos');
 			})
 			.catch(function(error){
 				console.log(error)
 			});
-			this.$emit('request-cos');
+			/*
+			setTimeout( () => {
+				this.$emit('request-cos');
+			},100);*/
+			
 		}
 	},
   	template: `
