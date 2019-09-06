@@ -15,30 +15,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
 	<title>Produse</title>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script>
-	     (adsbygoogle = window.adsbygoogle || []).push({
-	          google_ad_client: "ca-pub-4581171905000923",
-	          enable_page_level_ads: true
-	     });
-	</script>
+
 	
 
 </head>
 <body>
-	<div id="listaProduse">
+	<div v-cloak id="listaProduse">
 		<?php include 'includes/nav_inc_v.php'; ?>
 		<main>
-			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- Products Page Top -->
-			<ins class="adsbygoogle"
-			     style="display:block"
-			     data-ad-client="ca-pub-4581171905000923"
-			     data-ad-slot="4043671736"
-			     data-ad-format="auto"
-			     data-full-width-responsive="true"></ins>
-			<script>
-			     (adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
 			<div id="mobileMenu" class="text-center">
 					<br>
 					<button v-on:click="toggleMobileMain()" v-bind:class="{searchBtnSelected: mobileMenu == 1}" id="mobileBtnMain" class="searchBtn">Magazin Romanesc</button>

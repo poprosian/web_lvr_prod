@@ -23,8 +23,8 @@
 		if(empty($nume) || empty($desc) || empty($tag) || empty($pret))
 		{
 			
-			header("Location: admin_edit_pg?editId=".$idP."");
-			exit();
+			$message = 'Numele / Descrierea / Categoria / Pretul / Imaginea nu pot sa fie goale.';
+			echo "<script type='text/javascript'>alert('$message');</script>";
 		}
 		else
 		{

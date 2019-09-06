@@ -29,8 +29,8 @@ Vue.component('tabel-desktop',{
 		<th scope="row">{{count}}</th>
 		<td>{{produs.titlu}}</td>
 		<td>{{produs.cant}} buc.</td>
-		<td>{{produs.pret}}€</td>
-		<td>{{produs.pret*produs.cant | 2dec}}€</td>
+		<td>€{{produs.pret * 1 | 2dec}}</td>
+		<td>€{{produs.pret*produs.cant | 2dec}}</td>
 		<td><a v-on:click.prevent="productQuantity('delete',produs.id_produs)" class="btn btn-danger" href="">Sterge</a></td>
 	</tr>`
 });
@@ -63,7 +63,7 @@ Vue.component('tabel-mobil', {
 				<a v-on:click.prevent="productQuantity('plus',produs.id_produs)" href="" class="qtyPlus">+</a>
 				<a v-on:click.prevent="productQuantity('minus',produs.id_produs)" href="" class="qtyMinus">-</a>
 				<p class="bucati">buc.</p>
-				<p class="pret">{{produs.pret*produs.cant | 2dec}}€</p>
+				<p class="pret">€{{produs.pret*produs.cant | 2dec}}</p>
 			</div>
 			<a v-show="showX" v-on:click.prevent="productQuantity('delete',produs.id_produs)" class="delBtn" href="">X</a>
 		</div>

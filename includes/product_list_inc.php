@@ -1,6 +1,6 @@
 <?php
 	include_once 'conn_inc.php';
-	$sql = " SELECT * FROM produse;";
+	$sql = " SELECT * FROM produse ORDER BY titlu ASC;";
 	$result = mysqli_query($conn,$sql);
 	$resultCheck = mysqli_num_rows($result);
 

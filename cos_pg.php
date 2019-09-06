@@ -14,30 +14,12 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/cos.css">
 	<title>Coș de cumpărături</title>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script>
-	     (adsbygoogle = window.adsbygoogle || []).push({
-	          google_ad_client: "ca-pub-4581171905000923",
-	          enable_page_level_ads: true
-	     });
-	</script>
 </head>
 <body>
 	<?php include 'includes/nav_inc_v.php' ?>	
 	<br>	
 	<br>
 	<br>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- Cos Page Top -->
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-4581171905000923"
-	     data-ad-slot="8047523593"
-	     data-ad-format="auto"
-	     data-full-width-responsive="true"></ins>
-	<script>
-	     (adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
 	<div v-cloak id="app-id" class="container">
 		<div>
 			<div id="Title">
@@ -65,7 +47,7 @@
 							<td>Comision</td>
 							<td></td>
 							<td></td>
-							<td>5€</td>
+							<td>€5.00</td>
 							<td></td>
 						</tr>
 						<tr>
@@ -95,11 +77,11 @@
 							<p class="qtyP">1</p>
 						</div>
 						<p class="bucati">buc.</p>
-						<p id="comision">5€</p>
+						<p id="comision">€5.00</p>
 					</div>
 				</div>
 				<br>
-				<h3 style="text-align: right;">Total: {{total | 2dec}}</h3>
+				<h3 style="text-align: right;">Total: €{{total | 2dec}}</h3>
 			</div>
 			<div v-if="total>5" id="Checkout">
 				<div v-if="total>30" id="Detalii">

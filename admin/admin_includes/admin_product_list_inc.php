@@ -1,5 +1,5 @@
 <?php
-	$sql = " SELECT * FROM produse;";
+	$sql = " SELECT * FROM produse ORDER BY titlu ASC;;";
 	$result = mysqli_query($conn,$sql);
 	$resultCheck = mysqli_num_rows($result);
 	$i=0;
@@ -23,7 +23,6 @@
 								echo '<img class="card-img-top" src="../images/product_images/' . $row['image'] . '" alt="'. $row['image']. '">';
 								echo '<div class="card-body">';
 									echo '<h5 class="card-title">' . ucfirst($row['titlu']) . '</h5>';
-									echo '<p class="card-text">' . $row['descriere'] . '</p>';;
 									echo '<form action="admin_panel_pg" method="POST">';
 										echo '<button class="btn btn-danger" name="x-'.$row['id_produs'].'" >X</button>';
 										echo '<a href="admin_edit_pg?editId='.$row['id_produs'].'" class="btn btn-primary float-right">Editeaza</a>';

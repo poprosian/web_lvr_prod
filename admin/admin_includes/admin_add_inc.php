@@ -11,8 +11,9 @@
 
 		if(empty($nume) || empty($desc) || empty($tag) || empty($pret) || empty($img))
 		{
-			header("Location: admin_add_pg");
-			exit();
+			$message = 'Numele / Descrierea / Categoria / Pretul / Imaginea nu pot sa fie goale.';
+			echo "<script type='text/javascript'>alert('$message');</script>";
+			
 		}
 		else if($tag == 'NULL')
 		{

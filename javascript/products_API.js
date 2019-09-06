@@ -1,3 +1,7 @@
+Vue.filter('2dec', function(value){
+	return value.toFixed(2);
+});
+
 Vue.component('lista-produse',{
 	props: ['produs','numarcos'],
 	methods:{
@@ -26,7 +30,7 @@ Vue.component('lista-produse',{
 					<h5 class="card-title cardTitle">{{produs.titlu}}</h5>
 					<div class="sideHr"></div>
 					<br>
-					<p class="card-text cardText">{{produs.pret}}€</p>
+					<p class="card-text cardText">€{{produs.pret * 1 | 2dec}}</p>
 					<form method="POST" action="includes/cos_inc.php">
 						<input style="display:none;" type="number" value="1" class="float-left" maxlength="2" min="1" name="cantitate">
 						<input style="display:none;"  value="{{produs.id_produs}}" name="id_produs">
