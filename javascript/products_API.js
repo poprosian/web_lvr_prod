@@ -23,7 +23,7 @@ Vue.component('lista-produse',{
 		<div class="col-xl-3 col-sm-6 col-12  pdg">
 			<div class="card cCard">
 				<div class="text-center">
-					<img style="max-height: 170px; max-width: 170px;" v-bind:src="'/images/product_images/' + produs.image" alt=""  class="card-img-top">
+					<img style="min-height: 170px; max-height: 170px; max-width: 170px;" v-bind:src="'/images/product_images/' + produs.image" alt=""  class="card-img-top">
 				</div>
 				<div>
 				
