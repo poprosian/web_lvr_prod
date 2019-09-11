@@ -46,7 +46,7 @@ Vue.component('lista-produse',{
 new Vue({
 	el: "#listaProduse",
 	data:{
-		produse: [''],
+		produse: [],
 		sideMenu: true,
 		mobileMenu: 0,
 		badgeCount: 1,
