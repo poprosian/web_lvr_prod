@@ -121,13 +121,13 @@
             <div class="col-sm-3 myCols">
                 <h5>Contact</h5>
                 <ul>
-                    <li>0785-932-303</li>
+                    <li>###</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="social-networks">
-        <a href="https://www.facebook.com/livrariproduseromanesti/" class="facebook"><i class="fa fa-facebook-official"></i></a>
+        <a href="" class="facebook"><i class="fa fa-facebook-official"></i></a>
     </div>
     <div class="footer-copyright">
         <p>© 2019 Pop Rosian </p>
